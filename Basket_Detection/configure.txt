@@ -1,0 +1,32 @@
+#task to be executed, should be one of the following:
+#label / crop / compose /  training / ROC / Nearest
+gl_task = ROC
+##########
+#for label
+label_fn_video = ../videos/ball1.avi
+label_fn_annotation = ./annotations/annotation_ball1.txt
+##########
+#for crop
+crop_fn_video = ../videos/ball1.avi
+crop_fn_annotation = ./annotations/annotation_ball1.txt
+crop_dir_pos = ./pos_samples/pos_samples1/
+crop_dir_neg = ./neg_samples/neg_samples1/
+#########
+#for compose
+IMAGE_SIZE = 40
+IMAGE_ROW = 2
+IMAGE_COLUMN = 2
+POS_SAVE_PATH = ./crop_samples/ball2_pos/
+NEG_SAVE_PATH = ./crop_samples/ball2_neg/
+testing_fn = ./test_samples/ball2/
+train_pkl = ./train_data/ball2.pkl
+test_pkl = ./test_data/ball2.pkl
+##########
+#for training
+training_list = ./crop_samples/ball2_pos/
+pos_train_fn = ./crop_samples/ball2_pos/
+neg_train_fn = ./crop_samples/ball2_neg/
+pos_distance_dir = ./cv_hog_distance/ball2/pos.txt
+neg_distance_dir = ./cv_hog_distance/ball2/neg.txt
+#for POC
+test_distance_dir = ./cv_hog_distance/ball2/test.txt
